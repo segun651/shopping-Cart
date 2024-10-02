@@ -1,0 +1,346 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+
+ body {
+  z-index: 1000;
+ }
+ .modal {
+  z-index: 10000;
+ }
+    .overlay {
+      
+      width:100%;
+      height: 100%;
+      position: fixed; 
+     opacity: 0.7;
+      height: 100vh;
+     background-color:bisque;
+     z-index: 10;  
+     visibility: hidden;
+    }
+
+.navcontainer {
+    height: auto;
+    background-color:rgba(0, 0, 0, 0.806);
+    color: white;
+    padding: 5px 10px;
+}
+ .navcontainer h3{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+ }
+ .navheading{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-bottom: 10px;
+ }
+  .navicons{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navfilter {
+    padding: 5px 10px;
+  }
+ .navfilterbox{
+    display: flex;
+    flex-wrap: wrap;
+ }
+    
+  .navfilter li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+  .navfilter li:hover{
+    border-bottom:1px solid white ;
+    
+  }
+
+.productui{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+   margin: auto;
+   padding: 5px 10px;
+   row-gap:20px;
+   column-gap: 1.5rem; 
+   width:90vw;
+}
+
+
+ .product{
+    display: grid;
+    text-overflow: ellipsis;
+   overflow: hidden;
+     text-align: center;
+     box-shadow: 0 0 5px lightgrey;
+     padding: 5px 10px;
+     margin: 7px 10px;
+ }
+ .product img{
+    width:120px;
+    object-fit: contain;
+
+ }
+ 
+ .producttitle{
+  font-family: cursive ;
+     
+ }
+ .productprice{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+
+  .productdesc{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:100;
+    white-space: nowrap
+  }
+  .productratings{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+  }
+ .navaddtocart {
+    position: relative;
+    display: inline-block;
+   padding: 0 10px;
+  }
+  .navaddtocart svg{
+    position:  relative;
+  }
+   .navaddtocart .itemnumber{
+    position: absolute;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: -30%;
+    left: 30%;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    width: 20px;
+    text-align: center;
+   }
+  .navwishlist{
+    position: relative;
+    display: inline-block;
+  }
+  
+   .navwishlist svg {
+    position: relative;
+   }
+   .navwishlist .itemnumber2{
+    position: absolute;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: -30%;
+    left: 20%;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    width: 20px;
+    text-align: center;
+   }
+  .navaddtocart .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: white;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+   
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+  }
+   .navwishlist .tooltiptext{
+    visibility: hidden;
+  width: 120px;
+  background-color: white;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -100px;
+ 
+   }
+  
+  .navaddtocart:hover .tooltiptext {
+    visibility: visible;
+  }
+ 
+.navwishlist:hover .tooltiptext {
+  visibility: visible;
+}
+
+  .cartui{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 100;
+  background-color: white;  
+  width: 400px;
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+  overflow: scroll;
+  z-index: 100;
+  }
+
+  .cart, .wishlist {
+   display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 5px 10px;
+   margin-bottom: 7px;
+    
+  }
+  .cartimg,.wishlistimg{
+    
+    width: 100px;
+  }
+  .cartimg img, .wishlistimg img{
+    width:100%;
+  
+    object-fit: contain;
+    border-radius: 13px;
+    box-shadow: 0 0 5px lightgrey;
+  }
+   .cartdetails, .wishlistdetails{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+     font-size: 17px;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   }
+    .cartdetails input{
+      width: 80px;
+    padding: 5px 10px;
+    
+    }
+    
+     .cartui .total{
+      display: flex;
+      justify-content: end;
+      border-top: 1px solid black;
+      padding: 0 10px;
+      margin: 10px 0;
+      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+     }
+     .cartclose{
+      position: absolute;
+      top:0;
+       left:0;
+       font-size: 35px;
+        color: black;
+        margin-bottom: 20px;
+        font-weight: bold;
+        padding: 3px ;
+     }
+     .cartclose:hover{
+      background-color: red;
+      cursor: pointer;
+     }
+
+       .wishlistui{
+        position: fixed;
+        top:0;
+        left: 0;
+        background-color: white;
+        height: 100vh;
+        z-index: 100;
+        width: 400px;
+          transform: translateX(-100%);
+          transition: 0.6s ease-in-out;
+       }
+        .wishlistclose{
+          position: absolute;
+          top:0;
+           right:0;
+           font-size: 35px;
+            color: black;
+            margin-bottom: 20px;
+            font-weight: bold;
+            padding: 3px;
+            
+        }
+         
+     
+
+        .wishlistclose:hover{
+          background-color: red;
+          cursor: pointer;
+         }
+        
+         .noproducts{
+         
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+         }
+        
+   @media(max-width:500px){
+    .cartui,.wishlistui{
+      width: 100%;
+    }
+    .cartdetails, .wishlistdetails{
+      font-size: 1rem;
+    }
+    .cartui .total{
+      font-size: 1rem;
+    }
+    .producttitle h4{
+      font-size: 17px;
+    }
+    .product img{
+      width: 100px;
+    }
+    .product:last-child{
+     
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+     
+  
+    }
+    .productdesc{
+      font-size: 0.8rem;
+    
+    }
+   }
+
+    @media(max-width:350px){
+       .cartimg, .wishlistimg{
+        width: 50px;
+       }
+       .cartdetails, .wishlistdetails{
+        font-size: 0.9rem;
+      }
+      .productui{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));;
+        
+      }
+      .product img{
+        width: 80px;
+      }
+     .carttext,.wishlisttext{
+      font-size: 1rem;
+     }
+    }
+
+    
+  
