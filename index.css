@@ -268,7 +268,7 @@ width:120px;
         width: 400px;
           transform: translateX(-100%);
           transition: 0.6s ease-in-out;
-           overflow:scroll;
+           overflow-y:scroll;
        }
         .wishlistclose{
           position: absolute;
