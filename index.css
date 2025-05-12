@@ -78,14 +78,14 @@
  .product{
     display: grid;
     text-overflow: ellipsis;
-  
+  overflow:hidden;
      text-align: center;
      box-shadow: 0 0 5px lightgrey;
      padding: 5px 10px;
      margin: 7px 10px;
  }
  .product img{
-
+width:120px;
     object-fit: contain;
 
  }
@@ -102,7 +102,7 @@
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight:100;
-    white-space: nowrap
+   
   }
   .productratings{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
