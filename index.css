@@ -78,7 +78,7 @@
  .product{
     display: grid;
     text-overflow: ellipsis;
-   overflow: hidden;
+  
      text-align: center;
      box-shadow: 0 0 5px lightgrey;
      padding: 5px 10px;
